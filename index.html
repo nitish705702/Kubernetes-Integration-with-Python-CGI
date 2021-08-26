@@ -1,1 +1,24 @@
-
+<html>
+<body style="background-color:powderblue;">
+<h1 style="background-color:red">Hello Nitish Welcome to kubernetes Intergration with Python-CGI World</h1>
+<script>
+function lw(){
+var i=document.getElementById("in1").value
+var xh=new XMLHttpRequest();
+//xhr.onload
+xh.open("GET","http://10.0.2.15/cgi-bin/hi.py?x="+1,true);
+xh.send();
+//output from above url
+xh.onload=function(){
+var output=xh.responseText();
+document.getElementById("d1").innerHTML=output;
+}
+}
+</script>
+[root@localhost ~]# :<input id="in1"/>
+<button style="background-color:yellow" onclick="lw()">Click here to executed</button>
+<pre>
+<div id="d1">Here we have Output</div>
+</pre>
+</body>
+</html>
